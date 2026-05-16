@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\")",
+      "Bash(node generate_paper.js)",
+      "Bash(python3 -c \"import numpy, matplotlib; print\\('ok'\\)\")",
+      "Bash(mkdir -p /tmp/ragdms_proj)",
+      "Bash(python3 project1.py)",
+      "Bash(python3 project2.py)",
+      "Bash(python3 build_nb.py)",
+      "Bash(python3 -c \"import json; nb=json.load\\(open\\('/Users/subhodeepsarkar/Desktop/RAGDMS/DSPROJECT_NEW.ipynb'\\)\\); print\\('cells:', len\\(nb['cells']\\)\\); [print\\(i, c['cell_type'], len\\(c.get\\('outputs', []\\)\\)\\) for i,c in enumerate\\(nb['cells']\\)]\")",
+      "Bash(python3 -c \"import json; nb=json.load\\(open\\('/Users/subhodeepsarkar/Desktop/RAGDMS/DSPROJECT_NEW2.ipynb'\\)\\); print\\('cells:', len\\(nb['cells']\\)\\)\")"
+    ]
+  }
+}
