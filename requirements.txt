@@ -1,0 +1,27 @@
+# Core
+langchain==0.3.25
+langchain-community==0.3.24
+langchain-ollama==0.3.2
+langchain-chroma==0.2.4
+
+# Vector Store
+chromadb>=1.0.9
+
+# Embeddings
+sentence-transformers==3.4.1
+
+# Data Processing
+requests==2.32.3
+tqdm==4.67.1
+python-dotenv==1.1.0
+
+# Evaluation
+ragas==0.2.14
+datasets==3.5.0
+
+# Utilities
+pandas==2.2.3
+numpy==2.2.4
+matplotlib==3.10.1
+seaborn==0.13.2
+jupyter==1.1.1

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "q001",
+    "query": "something weird in my network traffic",
+    "ground_truth_answer": "Anomalous network traffic may indicate port scanning, lateral movement, or C2 beaconing. Key indicators include unusual port usage, high connection frequency to external IPs, and traffic at odd hours.",
+    "relevant_doc_keywords": ["lateral movement", "port scan", "C2", "network anomaly"],
+    "category": "vague"
+  },
+  {
+    "id": "q002",
+    "query": "How does Pass-the-Hash work and how can I detect it?",
+    "ground_truth_answer": "Pass-the-Hash (PtH) allows attackers to authenticate using captured NTLM hashes without knowing the plaintext password. Detection involves monitoring for NTLM authentication anomalies, unusual lateral movement patterns, and use of tools like Mimikatz.",
+    "relevant_doc_keywords": ["pass-the-hash", "NTLM", "lateral movement", "credential access"],
+    "category": "specific"
+  },
+  {
+    "id": "q003",
+    "query": "my server is acting slow and there are weird processes",
+    "ground_truth_answer": "Slow server performance with unusual processes may indicate cryptomining malware, a rootkit, or active exploitation. Investigate with process auditing, check for unauthorized scheduled tasks, and review network connections.",
+    "relevant_doc_keywords": ["malware", "cryptomining", "rootkit", "process injection"],
+    "category": "vague"
+  },
+  {
+    "id": "q004",
+    "query": "What are the indicators of compromise for Log4Shell (CVE-2021-44228)?",
+    "ground_truth_answer": "Log4Shell IOCs include JNDI lookup strings in HTTP headers/parameters (e.g., ${jndi:ldap://...}), outbound LDAP/RMI connections from Java processes, and unexpected class loading from remote servers.",
+    "relevant_doc_keywords": ["log4shell", "CVE-2021-44228", "JNDI", "RCE", "log4j"],
+    "category": "specific"
+  },
+  {
+    "id": "q005",
+    "query": "users complaining about being locked out",
+    "ground_truth_answer": "Account lockouts may result from password spraying attacks, brute force attempts, or credential stuffing. Investigate authentication logs for failed login attempts from multiple IPs, unusual timing patterns, and systematic username enumeration.",
+    "relevant_doc_keywords": ["brute force", "password spraying", "account lockout", "credential stuffing"],
+    "category": "vague"
+  },
+  {
+    "id": "q006",
+    "query": "How does Kerberoasting work?",
+    "ground_truth_answer": "Kerberoasting is an attack where an adversary requests Kerberos service tickets for service accounts and cracks them offline. It targets accounts with SPNs (Service Principal Names). Detection involves monitoring for unusual TGS-REQ requests, especially RC4 encryption type.",
+    "relevant_doc_keywords": ["kerberoasting", "kerberos", "SPN", "TGS", "credential access"],
+    "category": "specific"
+  },
+  {
+    "id": "q007",
+    "query": "strange emails being sent from our domain",
+    "ground_truth_answer": "Unauthorized emails from your domain may indicate phishing campaign abuse, compromised email accounts, or misconfigured SPF/DKIM records. Check email gateway logs, verify SPF/DKIM/DMARC configuration, and investigate for compromised accounts.",
+    "relevant_doc_keywords": ["phishing", "business email compromise", "SPF", "DKIM", "email spoofing"],
+    "category": "vague"
+  },
+  {
+    "id": "q008",
+    "query": "What MITRE ATT&CK techniques are used in ransomware attacks?",
+    "ground_truth_answer": "Common ransomware ATT&CK techniques include: T1486 (Data Encrypted for Impact), T1490 (Inhibit System Recovery), T1083 (File and Directory Discovery), T1021 (Remote Services for lateral movement), and T1562 (Impair Defenses).",
+    "relevant_doc_keywords": ["ransomware", "T1486", "data encrypted", "inhibit recovery", "lateral movement"],
+    "category": "specific"
+  },
+  {
+    "id": "q009",
+    "query": "files disappearing on network shares",
+    "ground_truth_answer": "Files disappearing from network shares may indicate ransomware activity (encrypting/deleting originals), an insider threat, or misconfigured access controls. Check file system audit logs, look for mass file modification events, and review user access patterns.",
+    "relevant_doc_keywords": ["ransomware", "data destruction", "file encryption", "insider threat"],
+    "category": "vague"
+  },
+  {
+    "id": "q010",
+    "query": "How can an attacker establish persistence on a Linux system?",
+    "ground_truth_answer": "Linux persistence mechanisms include: cron jobs (T1053.003), SSH authorized_keys modification (T1098.004), init.d/systemd service creation (T1543.002), webshells (T1505.003), and LD_PRELOAD hijacking (T1574.006).",
+    "relevant_doc_keywords": ["persistence", "linux", "cron", "SSH", "systemd", "webshell"],
+    "category": "specific"
+  },
+  {
+    "id": "q011",
+    "query": "how do i know if we got hacked",
+    "ground_truth_answer": "Signs of a compromise include: unexpected privileged account activity, outbound connections to unknown IPs, new scheduled tasks or services, modified system files, disabled security tools, and alerts from IDS/SIEM. Begin with reviewing authentication logs and EDR telemetry.",
+    "relevant_doc_keywords": ["compromise", "intrusion detection", "IOC", "incident response"],
+    "category": "vague"
+  },
+  {
+    "id": "q012",
+    "query": "What is the difference between a vulnerability and an exploit?",
+    "ground_truth_answer": "A vulnerability is a weakness in a system (e.g., buffer overflow, SQL injection). An exploit is code or technique that leverages a vulnerability to achieve an unauthorized action. A CVE describes the vulnerability; a Metasploit module or PoC is the exploit.",
+    "relevant_doc_keywords": ["vulnerability", "exploit", "CVE", "attack surface"],
+    "category": "specific"
+  },
+  {
+    "id": "q013",
+    "query": "database queries running slow and CPU high",
+    "ground_truth_answer": "High CPU and slow queries on a database may indicate cryptomining malware, SQL injection exploitation, or a denial-of-service attack. Investigate running queries, check for unauthorized database users, review network connections from the DB server.",
+    "relevant_doc_keywords": ["SQL injection", "cryptomining", "database attack", "DoS"],
+    "category": "vague"
+  },
+  {
+    "id": "q014",
+    "query": "How does DMARC protect against email spoofing?",
+    "ground_truth_answer": "DMARC (Domain-based Message Authentication, Reporting & Conformance) builds on SPF and DKIM to allow domain owners to specify how unauthenticated emails should be handled (none/quarantine/reject) and to receive reports on email authentication failures.",
+    "relevant_doc_keywords": ["DMARC", "SPF", "DKIM", "email spoofing", "phishing"],
+    "category": "specific"
+  },
+  {
+    "id": "q015",
+    "query": "admin account doing things at 3am",
+    "ground_truth_answer": "Unusual privileged account activity outside business hours is a strong indicator of compromise. Possible causes include stolen credentials, an insider threat, or an attacker using a backdoor. Immediately investigate the source IP, commands run, and correlate with other log sources.",
+    "relevant_doc_keywords": ["privileged access", "credential theft", "insider threat", "anomalous behavior"],
+    "category": "vague"
+  }
+]
