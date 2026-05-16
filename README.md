@@ -1,8 +1,8 @@
 # Enhancing Retrieval Quality in RAG-Based Defensive Security Systems through Query Reformulation
 
-**Project Title 17 — Agentic AI Research Project**  
-**Author:** Subhodeep Sarkar  
-**Email:** sarkar10000000@gmail.com
+**Group No. 29** — Agentic AI Project
+
+**Author:** Subhodeep Sarkar - 253000118 |  Nitish Kumar Bind - 253000112 |  Anurag Kumar Sahu - 253000104
 
 ---
 
@@ -164,16 +164,6 @@ python3 query.py --strategy stepback
 python3 query.py --strategy decomposition
 ```
 
-### Step 5 — Generate the IEEE Research Paper
-
-```bash
-export PATH="/opt/homebrew/bin:$PATH"
-node generate_paper.js
-# Output: research_paper_IEEE.docx
-```
-
----
-
 ## Key Results
 
 ### Overall Mean Scores (15 queries)
@@ -239,7 +229,7 @@ Located at: `data/queries/test_queries.json`
 |---|---|
 | Working RAG system | `src/` directory |
 | Benchmark results | `data/results.csv` |
-| IEEE Research Paper | `research_paper_IEEE.docx` |
+| IEEE Research Paper | `Group-29.pdf` |
 | Presentation | `RAGDMS_Project_Presentation.pptx` |
 | Analysis notebook | `notebooks/analysis.ipynb` |
 | Unit tests | `tests/test_pipelines.py` |
